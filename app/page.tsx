@@ -88,7 +88,7 @@ const automaticFailures = [
   "Evaluation leakage",
 ];
 
-export default function Home() {
+export function LegacyHome() {
   return (
     <main id="top">
       <nav className="rail" aria-label="Page sections">
@@ -445,3 +445,5 @@ export default function Home() {
     </main>
   );
 }
+
+export { default } from "./SimplifiedHome";

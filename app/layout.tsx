@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./simple.css";
 
 export const metadata: Metadata = {
-  title: "Clone System — Source-grounded digital advisors",
+  title: "Clone System — From content to useful advice",
   description:
-    "A visual map of the skills, evidence controls and release gates that turn public thought-leader material into an auditable digital advisor.",
+    "A simple explanation of how the Clone System collects public work, understands its ideas and produces source-backed business advice.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

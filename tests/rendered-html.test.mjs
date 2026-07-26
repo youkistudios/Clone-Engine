@@ -15,11 +15,12 @@ async function render() {
   );
 }
 
-test("renders the Clone System map", async () => {
+test("renders the simplified Clone System explanation", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /<title>Clone System — Source-grounded digital advisors<\/title>/i);
+  assert.match(html, /<title>Clone System — From content to useful advice<\/title>/i);
+  assert.match(html, /Three jobs\. One checker\./);
   assert.match(html, /Four skills\. One evidence chain\./);
   assert.match(html, /Process once\. Remember forever\./);
   assert.match(html, /Frequency is a signal—not truth\./);
