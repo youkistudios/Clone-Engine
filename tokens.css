@@ -1,0 +1,57 @@
+:root {
+  --color-paper: oklch(96% 0.018 82);
+  --color-paper-deep: oklch(91% 0.028 80);
+  --color-paper-raised: oklch(99% 0.008 82);
+  --color-ink: oklch(19% 0.025 64);
+  --color-ink-soft: oklch(39% 0.03 64);
+  --color-muted: oklch(49% 0.025 68);
+  --color-rule: oklch(76% 0.035 77);
+  --color-rule-strong: oklch(57% 0.04 72);
+  --color-signal: oklch(67% 0.17 47);
+  --color-signal-soft: oklch(91% 0.055 58);
+  --color-signal-ink: oklch(18% 0.04 48);
+  --color-blue: oklch(52% 0.12 244);
+  --color-blue-soft: oklch(91% 0.035 244);
+  --color-red: oklch(53% 0.18 28);
+  --color-red-soft: oklch(91% 0.045 28);
+  --color-green: oklch(47% 0.10 146);
+  --color-focus: oklch(42% 0.16 245);
+  --color-accent: var(--color-signal);
+  --color-accent-ink: var(--color-signal-ink);
+
+  --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-body: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", monospace;
+
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.563rem;
+  --text-xl: 1.953rem;
+  --text-2xl: 2.441rem;
+  --text-3xl: 3.052rem;
+  --text-display: clamp(3.2rem, 10vw, 8rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;
+  --dur-base: 220ms;
+  --dur-slow: 480ms;
+  --rule-hairline: 1px;
+  --rule-heavy: 2px;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+}
