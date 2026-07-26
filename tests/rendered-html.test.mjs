@@ -21,6 +21,9 @@ test("renders the simplified Clone System explanation", async () => {
   const html = await response.text();
   assert.match(html, /<title>Clone System — From content to useful advice<\/title>/i);
   assert.match(html, /Three jobs\. One checker\./);
+  assert.match(html, /knowledge-foundry-hero-v1\.jpg/);
+  assert.match(html, /evidence-audit-v1\.jpg/);
+  assert.match(html, /property="og:image" content="https:\/\/clone-system-map\.croks\.chatgpt\.site\/og\.png"/);
   assert.match(html, /Four skills\. One evidence chain\./);
   assert.match(html, /Process once\. Remember forever\./);
   assert.match(html, /Frequency is a signal—not truth\./);

@@ -56,16 +56,31 @@ export default function SimplifiedHome() {
         </nav>
 
         <header className="simple__hero">
-          <p className="simple__kicker">A simpler explanation</p>
-          <h1>Turn years of content into useful business advice.</h1>
-          <p className="simple__lede">
-            Give the system a client conversation. It finds the real problem,
-            applies the thought leader’s most relevant published ideas, and
-            returns a practical plan with sources.
-          </p>
-          <a className="simple__text-link" href="#how">
-            See the three-step system ↓
-          </a>
+          <div className="simple__hero-copy">
+            <p className="simple__kicker">A simpler explanation</p>
+            <h1>Turn years of content into useful business advice.</h1>
+            <p className="simple__lede">
+              Give the system a client conversation. It finds the real problem,
+              applies the thought leader’s most relevant published ideas, and
+              returns a practical plan with sources.
+            </p>
+            <a className="simple__text-link" href="#how">
+              See the three-step system ↓
+            </a>
+          </div>
+          <figure className="simple__hero-art">
+            <img
+              src="/images/knowledge-foundry-hero-v1.jpg"
+              alt="Source pages, film and audio fragments following an orange thread through a blue glass evidence core and emerging as a focused decision path."
+              width="1672"
+              height="941"
+            />
+            <figcaption>
+              <span>Sources</span>
+              <span>Evidence</span>
+              <span>Decision</span>
+            </figcaption>
+          </figure>
         </header>
 
         <section className="simple__promise" aria-label="System promise">
@@ -144,20 +159,32 @@ export default function SimplifiedHome() {
           </p>
         </section>
 
-        <section id="quality" aria-labelledby="quality-title">
-          <p className="simple__kicker">How the system decides what to trust</p>
-          <h2 id="quality-title">Frequency is a signal—not truth.</h2>
-          <p className="simple__intro">
-            An idea mentioned ten times matters more than an idea mentioned
-            once, but repetition alone never makes advice correct.
-          </p>
-          <div className="simple__weights">
-            {weightSignals.map(([name, description]) => (
-              <div key={name}>
-                <strong>{name}</strong>
-                <p>{description}</p>
-              </div>
-            ))}
+        <section id="quality" className="simple__quality" aria-labelledby="quality-title">
+          <figure className="simple__audit-art">
+            <img
+              src="/images/evidence-audit-v1.jpg"
+              alt="An optical inspection lens checks paper evidence connected by an orange thread to a cobalt glass tile and a blank action card."
+              width="1003"
+              height="1568"
+              loading="lazy"
+            />
+            <figcaption>Every recommendation has to survive inspection.</figcaption>
+          </figure>
+          <div className="simple__quality-copy">
+            <p className="simple__kicker">How the system decides what to trust</p>
+            <h2 id="quality-title">Frequency is a signal—not truth.</h2>
+            <p className="simple__intro">
+              An idea mentioned ten times matters more than an idea mentioned
+              once, but repetition alone never makes advice correct.
+            </p>
+            <div className="simple__weights">
+              {weightSignals.map(([name, description]) => (
+                <div key={name}>
+                  <strong>{name}</strong>
+                  <p>{description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

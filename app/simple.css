@@ -1,4 +1,4 @@
-/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4 · macrostructure: Long Document · theme: Editorial · tone: calm utilitarian · audience: nontechnical operators · use: understand the system in under two minutes · contrast: pass (40–41) · nav: N6 · footer: Ft2 · slop: pass (42–45) · honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: pass (34, 49, 50–57) · icons: pass (30) */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 · macrostructure: Photographic narrative · theme: Editorial · tone: cinematic utilitarian · audience: nontechnical operators · use: understand the system in under two minutes · contrast: pass (40–41) · nav: N6 · footer: Ft2 · slop: pass (42–45) · honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: pass (34, 49, 50–57) · icons: pass (30) */
 
 .simple {
   background: var(--color-paper);
@@ -64,12 +64,16 @@
 }
 
 .simple__hero {
-  min-height: min(46rem, calc(100svh - 4.5rem));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  min-height: auto;
   padding-block: var(--space-3xl) var(--space-4xl);
   border-block-end: var(--rule-heavy) solid var(--color-ink);
+}
+
+.simple__hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 62rem;
+  margin-block-end: var(--space-2xl);
 }
 
 .simple__kicker {
@@ -95,6 +99,52 @@
   font-weight: 600;
   text-underline-offset: var(--space-2xs);
   white-space: nowrap;
+}
+
+.simple__hero-art {
+  position: relative;
+  margin: 0 calc(clamp(var(--space-md), 4vw, var(--space-2xl)) * -1);
+  overflow: hidden;
+  background: var(--color-ink);
+}
+
+.simple__hero-art img,
+.simple__audit-art img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.simple__hero-art img {
+  min-height: 22rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.simple__hero-art figcaption {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: var(--space-md);
+  background: linear-gradient(transparent, var(--color-ink));
+  color: var(--color-paper);
+}
+
+.simple__hero-art figcaption span {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.simple__hero-art figcaption span:nth-child(2) {
+  text-align: center;
+}
+
+.simple__hero-art figcaption span:last-child {
+  text-align: end;
 }
 
 .simple section {
@@ -144,11 +194,25 @@
 }
 
 .simple__flow {
+  position: relative;
   display: grid;
   gap: var(--space-sm);
 }
 
+.simple__flow::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset-block-start: 4.5rem;
+  inset-inline: var(--space-lg);
+  height: 0.18rem;
+  background: var(--color-signal);
+  box-shadow: 0 0 0 var(--rule-hairline) var(--color-signal-ink);
+  pointer-events: none;
+}
+
 .simple__flow article {
+  position: relative;
   min-width: 0;
   padding: var(--space-lg);
   border: var(--rule-hairline) solid var(--color-rule-strong);
@@ -156,11 +220,21 @@
 }
 
 .simple__number {
-  display: block;
-  margin-block-end: var(--space-2xl);
-  color: var(--color-signal);
+  position: relative;
+  z-index: 3;
+  width: 2.7rem;
+  height: 2.7rem;
+  display: grid;
+  place-items: center;
+  margin-block-end: var(--space-xl);
+  border: var(--rule-heavy) solid var(--color-signal-ink);
+  border-radius: 50%;
+  background: var(--color-signal);
+  color: var(--color-signal-ink);
   font-family: var(--font-display);
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
+  line-height: 1;
+  text-align: center;
 }
 
 .simple__technical-name {
@@ -261,6 +335,38 @@
 .simple__weights p {
   margin: 0;
   color: var(--color-ink-soft);
+}
+
+.simple__quality {
+  display: grid;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.simple__audit-art {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: var(--color-ink);
+}
+
+.simple__audit-art img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.simple__audit-art figcaption {
+  position: absolute;
+  inset-inline: var(--space-md);
+  inset-block-end: var(--space-md);
+  max-width: 16ch;
+  padding: var(--space-sm);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: 700;
+  line-height: 1.05;
 }
 
 .simple__memory {
@@ -430,6 +536,16 @@
   .simple__weights > div {
     grid-template-columns: minmax(8rem, 0.55fr) minmax(0, 1.45fr);
     align-items: baseline;
+  }
+
+  .simple__quality {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: clamp(var(--space-2xl), 6vw, var(--space-4xl));
+  }
+
+  .simple__audit-art {
+    position: sticky;
+    top: var(--space-md);
   }
 
   .simple__memory {
