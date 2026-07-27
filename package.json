@@ -1,7 +1,16 @@
 {
-  "name": "site-creator-vinext-starter",
+  "name": "clone-engine",
   "version": "0.1.0",
-  "private": true,
+  "description": "A public, source-grounded architecture for building evidence-backed digital advisors.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youkistudios/Clone-Engine.git"
+  },
+  "homepage": "https://github.com/youkistudios/Clone-Engine#readme",
+  "bugs": {
+    "url": "https://github.com/youkistudios/Clone-Engine/issues"
+  },
   "engines": {
     "node": ">=22.13.0"
   },

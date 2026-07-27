@@ -69,7 +69,7 @@ export default function SimplifiedHome() {
             </a>
           </div>
           <figure className="simple__hero-art">
-            <img
+            <Image
               src="/images/knowledge-foundry-hero-v1.jpg"
               alt="Source pages, film and audio fragments following an orange thread through a blue glass evidence core and emerging as a focused decision path."
               width="1672"
@@ -161,7 +161,7 @@ export default function SimplifiedHome() {
 
         <section id="quality" className="simple__quality" aria-labelledby="quality-title">
           <figure className="simple__audit-art">
-            <img
+            <Image
               src="/images/evidence-audit-v1.jpg"
               alt="An optical inspection lens checks paper evidence connected by an orange thread to a cobalt glass tile and a blank action card."
               width="1003"
@@ -207,17 +207,17 @@ export default function SimplifiedHome() {
         </section>
 
         <section className="simple__status" aria-labelledby="status-title">
-          <p className="simple__kicker">Current pilot</p>
-          <h2 id="status-title">Built carefully. Not pretending to be finished.</h2>
+          <p className="simple__kicker">Release posture</p>
+          <h2 id="status-title">The public site explains the system. It does not serve an advisor.</h2>
           <div className="simple__stats">
-            <div><strong>10</strong><span>sources registered</span></div>
-            <div><strong>91</strong><span>candidate claims</span></div>
-            <div><strong>12</strong><span>calibrated principles</span></div>
-            <div><strong>0</strong><span>approved for live advice</span></div>
+            <div><strong>1</strong><span>public architecture</span></div>
+            <div><strong>0</strong><span>public source corpora</span></div>
+            <div><strong>0</strong><span>public client records</span></div>
+            <div><strong>0</strong><span>live advisor claims</span></div>
           </div>
           <p className="simple__release">
-            Release decision: <strong>BLOCKED</strong> until the evidence,
-            rights and independent tests pass.
+            Serving decision: <strong>BLOCKED BY DESIGN</strong> until a
+            specific corpus clears rights, attribution and independent tests.
           </p>
         </section>
 
@@ -279,3 +279,4 @@ export default function SimplifiedHome() {
     </main>
   );
 }
+import Image from "next/image";

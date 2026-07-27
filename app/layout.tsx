@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./simple.css";
 
+const publicSiteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
 export const metadata: Metadata = {
   title: "Clone System — From content to useful advice",
   description:
     "A simple explanation of how the Clone System collects public work, understands its ideas and produces source-backed business advice.",
-  metadataBase: new URL("https://clone-system-map.croks.chatgpt.site"),
+  ...(publicSiteUrl ? { metadataBase: new URL(publicSiteUrl) } : {}),
   openGraph: {
     title: "Clone System",
     description: "Collect. Understand. Advise. Verify.",

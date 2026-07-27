@@ -23,15 +23,15 @@ test("renders the simplified Clone System explanation", async () => {
   assert.match(html, /Three jobs\. One checker\./);
   assert.match(html, /knowledge-foundry-hero-v1\.jpg/);
   assert.match(html, /evidence-audit-v1\.jpg/);
-  assert.match(html, /property="og:image" content="https:\/\/clone-system-map\.croks\.chatgpt\.site\/og\.png"/);
+  assert.match(html, /property="og:image" content="\/og\.png"/);
   assert.match(html, /Four skills\. One evidence chain\./);
   assert.match(html, /Process once\. Remember forever\./);
   assert.match(html, /Frequency is a signal—not truth\./);
-  assert.match(html, /Release decision:/);
+  assert.match(html, /Serving decision:/);
   assert.doesNotMatch(html, /codex-preview|Building your site|react-loading-skeleton/i);
 });
 
-test("renders all specialist skills and honest pilot numbers", async () => {
+test("renders all specialist skills and public-data boundaries", async () => {
   const response = await render();
   const html = await response.text();
   for (const label of [
@@ -42,7 +42,8 @@ test("renders all specialist skills and honest pilot numbers", async () => {
   ]) {
     assert.match(html, new RegExp(label));
   }
-  for (const value of ["10", "91", "12", "0"]) {
+  for (const value of ["1", "0"]) {
     assert.match(html, new RegExp(`>${value}<`));
   }
+  assert.match(html, /BLOCKED BY DESIGN/);
 });

@@ -125,9 +125,9 @@ export function LegacyHome() {
             </p>
           </div>
           <div className="truth-strip" aria-label="Current pilot status">
-            <div><strong>10</strong><span>sources registered</span></div>
-            <div><strong>91</strong><span>candidate claims</span></div>
-            <div><strong>12</strong><span>calibrated principles</span></div>
+            <div><strong>1</strong><span>public architecture</span></div>
+            <div><strong>0</strong><span>public source corpora</span></div>
+            <div><strong>0</strong><span>public client records</span></div>
             <div className="truth-strip__blocked">
               <strong>0</strong><span>serving-approved principles</span>
             </div>
@@ -393,14 +393,15 @@ export function LegacyHome() {
           </div>
           <div className="readiness__body">
             <p>
-              The pilot proves the evidence pipeline, indexing, structured
-              extraction and calibration machinery. It does not yet prove that
-              the advisor can safely answer “the way Alex would.”
+              This public repository explains the evidence pipeline, indexing,
+              structured extraction and calibration machinery. It does not
+              publish a source corpus or claim that an advisor can safely
+              answer as any real person.
             </p>
             <dl>
-              <div><dt>Claims awaiting approval</dt><dd>91</dd></div>
-              <div><dt>Principles not released</dt><dd>12</dd></div>
-              <div><dt>Sources missing rights basis</dt><dd>10</dd></div>
+              <div><dt>Public source corpus</dt><dd>0</dd></div>
+              <div><dt>Public client records</dt><dd>0</dd></div>
+              <div><dt>Serving-approved knowledge</dt><dd>0</dd></div>
               <div><dt>Serving knowledge objects</dt><dd>0</dd></div>
             </dl>
             <p className="readiness__decision">
