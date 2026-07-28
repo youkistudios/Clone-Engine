@@ -1,14 +1,14 @@
 # Clone Engine
 
-Clone Engine is a public reference implementation for a source-grounded digital-advisor workflow. It explains how to turn published material into useful advice while keeping the evidence, attribution, rights, client memory, and release decision separate.
+Clone Engine shows how to turn a person's published work into a digital advisor that can explain where its advice came from. It is for teams that need to keep source material, interpretation, client information, and final approval separate.
 
-It is deliberately **not** a literal clone of a person, a public source corpus, or a production advisor endpoint.
+This repository explains the architecture and includes a working demonstration site. It does not contain a person's source material, impersonate anyone, or provide a production advisor service.
 
 ## What this repository contains
 
 - A polished public explainer site for the Clone System architecture.
 - The four operating roles: ingest sources, extract knowledge, build the advisor, and audit fidelity.
-- A deployment-neutral Vinext/Cloudflare Worker application with lint, build, and rendered-page tests.
+- A Vinext application that builds as a Cloudflare Worker, with lint, build, and rendered-page tests. Hosting configuration is left to the operator.
 - Original illustrative artwork used by the site.
 
 ## What it intentionally excludes
@@ -19,7 +19,7 @@ It is deliberately **not** a literal clone of a person, a public source corpus, 
 
 Keeping those materials out of the public repository is a feature: a public architecture should not accidentally publish restricted content, private client data, or an unsupported claim of identity fidelity.
 
-## The operating model
+## How it works
 
 ```text
 Published source
@@ -31,7 +31,7 @@ Published source
   -> independently audit before release
 ```
 
-The system treats repeated advice as a prominence signal, not a truth signal. Any advice that cannot be attributed, bounded, cited, and evaluated should narrow or abstain rather than improvise.
+Repeated advice may show what a person discusses often; repetition does not make the advice true. When the system cannot trace or evaluate a recommendation, it should narrow its answer or decline instead of guessing.
 
 ## Local development
 
